@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <GameFolder>/mnt/Games/Steam/steamapps/common/Among Us/</GameFolder>
+        <AssemblyName>CrewNodeHost</AssemblyName>
+        <RootNamespace>CrewNodeHost</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="0Harmony">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\core\0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="BepInEx.Core">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\core\BepInEx.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="BepInEx.IL2CPP">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\core\BepInEx.IL2CPP.dll</HintPath>
+        </Reference>
+        <Reference Include="Hazel">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\Hazel.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2Cppmscorlib">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\Il2Cppmscorlib.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppSystem.Core">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\Il2CppSystem.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="UnhollowerBaseLib">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\core\UnhollowerBaseLib.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\UnityEngine.IMGUIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\UnityEngine.InputLegacyModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PhysicsModule">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\UnityEngine.PhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\UnityEngine.TextRenderingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+          <HintPath>..\..\Among.Us.v2020.9.9s\BepInEx\unhollowed\UnityEngine.UI.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <Target Name="Copy" AfterTargets="Build">
+        <ItemGroup>
+            <OutputFiles Include="$(OutputPath)$(AssemblyName).dll" />
+        </ItemGroup>
+        <Copy SourceFiles="@(OutputFiles)" DestinationFolder="$(GameFolder)/BepInEx/plugins/" Condition="'$(Configuration)' == 'Debug'" />
+    </Target>
+</Project>

@@ -1,0 +1,14 @@
+﻿[Message: Preloader] BepInEx 6.0.0.0 - Among Us
+[Info   : Preloader] Running under Unity v2019.4.9.5308042
+[Debug  : Preloader] Game executable path: C:\Users\Temporary\Desktop\Client1\Among Us.exe
+[Debug  : Preloader] Unhollowed assembly directory: C:\Users\Temporary\Desktop\Client1\BepInEx\unhollowed
+[Debug  : Preloader] BepInEx root path: C:\Users\Temporary\Desktop\Client1\BepInEx
+[Message:   BepInEx] Chainloader initialized
+[Debug  : Preloader] Runtime invoke pointer: 0x7878ECF0
+[Debug  : Preloader] Runtime invoke patched
+[Debug  :   BepInEx] Examining 'C:\Users\Temporary\Desktop\Client1\BepInEx\plugins\CodeIsNotAmongUs.dll'
+[Info   :   BepInEx] 1 plugins to load
+[Info   :   BepInEx] Loading [Code is not among us 0.1.0]
+[Debug  :Code is not among us] Patching..
+[Message:   BepInEx] Chainloader startup complete
+[Debug  : Preloader] Runtime invoke unpatched
